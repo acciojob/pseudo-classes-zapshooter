@@ -1,16 +1,74 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Pseudo-Classes Styling Demo</title>
+  <style>
+    :root {
+      background-color: rgb(135, 206, 235);
+    }
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: Arial, sans-serif;
+    }
+    /* ARTICLE PARAGRAPHS */
+    article p:first-child {
+      background: #000;
+      color: #fff;
+      padding: 12px;
+    }
+    article p:nth-child(2) {
+      background: none;
+      color: #000;
+      padding: 12px;
+    }
+    article p:last-child {
+      color: red;
+      background: none;
+      padding: 12px;
+    }
+    /* UNORDERED LIST */
+    ul {
+      margin-top: 40px;
+      padding-left: 0;
+      width: 380px;
+      list-style: disc inside;
+      background: transparent;
+    }
+    ul li {
+      width: 50%;
+      padding: 10px;
+      margin-bottom: 9px;
+      background: gray;
+      font-size: 16px;
+      box-sizing: border-box;
+      transition: background 0.15s;
+    }
+    ul li:nth-child(odd) {
+      background: #fff;
+    }
+    ul li:nth-last-child(3) {
+      background: pink !important;
+    }
+    ul li:first-child,
+    ul li:last-child {
+      font-size: 22px;
+    }
+  </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
-
+  <article>
+    <p>This is the first paragraph. White on black.</p>
+    <p>This is the second paragraph. Standard color.</p>
+    <p>This is the third paragraph. Red text.</p>
+  </article>
+  <ul>
+    <li>First Item</li>
+    <li>Second Item</li>
+    <li>Third Item</li>
+    <li>Fourth Item</li>
+    <li>Fifth Item</li>
+  </ul>
 </body>
-
 </html>
